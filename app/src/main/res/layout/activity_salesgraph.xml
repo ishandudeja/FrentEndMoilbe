@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".salesgraph">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:text="Year"
+                android:textAlignment="textEnd"
+                android:textColor="@color/navyblue"
+                android:layout_height="wrap_content"
+                android:padding="2dp"/>
+            <Spinner
+                android:id="@+id/myspinner"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:background="#ccccff"
+                android:layout_height="wrap_content"
+                android:padding="2dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/grayletter"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Sales Bi-monthly/Year"
+            android:textAlignment="center"
+            android:textColor="@color/navyblue"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:padding="2dp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
